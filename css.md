@@ -106,4 +106,14 @@
     <div style="color: white; background-color: black;">...</div>
   </body>
 ```
+## Block e Inline elements
+- a maioria dos elementos que usamos no css são elementos em bloco, em outras palavras, o padrão deles é ter o atributo *display: block*, e por padrão, elementos em bloco stackam em cima do outro
+- já os inline elements, não começam em uma nova linha, um grande exemplo é a tag <a></a>
+### o meio termo inline-block
+- eles se comportam como inline elements mas com block-style padding e margin
+- *display: inline-block* é util, mas vamos usar mais flexbox para fazer essas coisas.
+
+## Divs e Span
+- são elementos que não dizem 'nada' ao navegador, ao contrário de *p* por exemplo, que diz para o navegador tratar o elemento como se fosse parágrafo, são apenas caixas genéricas que podem conter qualquer coisa
+- a grande diferença entre eles é: *div* é um elemento do tipo block e *span* é inline
 
