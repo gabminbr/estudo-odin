@@ -31,3 +31,11 @@
 - flex-basis: ele seta o tamanho inicial de um flex item, pode ser confundido com o width, entretanto, ele vai ser o width ou height dependendo da direcao que está o flex container, se estiver coluna por exemplo, o flex basis vai definir a altura do item, nao a largura, por padrao, ele vem como auto, pois diz para o navegador "Olhe para o meu conteúdo ou para o meu width para saber meu tamanho inicial". Ao usar o 0 como parametro, o que acontece é que ele ignora o tamanho dado pelo width e comeca do 0 e distribui o valor igualmente
 - por padrão, se fizermos *flex: 1*, o atalho na verdade é para *flex: 1 1 0%*, 1 para grow 1 para shrink e 0 para basis
 
+## Axes
+- podemos usar o flex container horizontalmente ou em coluna, por padrão a direção do flexbox é horizontal, para alterar, adicionaremos esse atributo no flex container: *flex-direction: column;*
+
+## Alignment
+- para organizar os itens no main axis, usamos o justify-content no flex container, exemlpo, *justify-content: space-between*, se tiver padrao o axis do container, ele vai organizar os flex itens de forma horizontal com um espacamento entre eles, lembre-se que o main axis vai depender sempre de qual o valor do seu *flex-direction*, se for padrao (row), o main axis vai ser horizontal.
+- para organizar os itens do cross axis (secundario), use o *align-items: center*
+### Gap
+- 
