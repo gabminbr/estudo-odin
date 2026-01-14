@@ -38,4 +38,5 @@
 - para organizar os itens no main axis, usamos o justify-content no flex container, exemlpo, *justify-content: space-between*, se tiver padrao o axis do container, ele vai organizar os flex itens de forma horizontal com um espacamento entre eles, lembre-se que o main axis vai depender sempre de qual o valor do seu *flex-direction*, se for padrao (row), o main axis vai ser horizontal.
 - para organizar os itens do cross axis (secundario), use o *align-items: center*
 ### Gap
-- 
+- basicamente define espaço entre os flex itens de um flex container, a sintaxe é bem facil *gap: 8px* por exemplo, no flex container, é parecido com o atributo margin.
+
