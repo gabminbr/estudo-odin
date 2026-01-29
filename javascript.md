@@ -44,6 +44,7 @@
 ```javascript
     let greeting = "Olá \"senhor\" Adam.";
 ```
+- lembre-se: ***STRINGS SÃO IMUTÁVEIS!!!!***.
 #### Boolean
 - true e false
 ### condicionais
@@ -82,4 +83,4 @@ let sayHi = function() {
 - lembre-se que funções são também valores, não importa se foi criado usando a sintaxe padrao ou por function expression, entao se criarmos sayHi do jeito padrao e chamar apenas ***sayHi*** sem parenteses, vai retornar a escrita da funcao.
 - diferença entre declaracao de funcao e expressao de funcao: basicamente, a expressao de funcao vai criar a funcao no exato momento que a linha executar o "let func = function....", e só é usavel se for chamada **a partir** desse momento, já a declaracao nao, pois podemos chamar ela antes da declaracao, pois o javascript primeiro busca as declaracoes de funcoes e executa todas elas e só assim comeca a execucao do codigo.
 - outro ponto tambem, é que as funcoes q sao declaradas e nao expressadas como variaveis, se sao criadas dentro de blocos como um if else, so pode ser acessada dentro daquele escopo, fora dele não.
-#### Arrow Functions
+
