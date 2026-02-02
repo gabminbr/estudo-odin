@@ -106,6 +106,51 @@ for(let i = 0; i < nomes.length; i++) {
 }
 ```
 ### Arrays
-- usamos *const nomeVariavel = [a, b, c];
+#### declaração
+- exemplo:
+```javascript
+let arr = new Array();
+let arr = [];
+```
 - importante, arrays em javascript aceitam qualquer tipo de dados, pode ter um array com string, int, etc.
-- não podemos 
+- para criar matrizes:
+```javascript
+let matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+```
+#### map method
+- é uma função que espera como argumento um callback, basicamente uma função que espera como argumento outra função:
+```javascript
+function addOne(num) {
+  return num + 1;
+}
+const arr = [1, 2, 3, 4, 5];
+const mappedArr = arr.map(addOne);
+console.log(mappedArr); // Outputs [2, 3, 4, 5, 6]
+```
+- ele retorna um novo array após ter iterado sobre todos os elementos do array e aplicado a funçao que foi passada como argumento
+#### filter method
+- vai funcionar de forma parecida, entretanto, é uma função apenas para filtrar o array de acordo com uma funcao que retorna true ou false
+```javascript
+function isOdd(num) {
+  return num % 2 !== 0;
+}
+const arr = [1, 2, 3, 4, 5];
+const oddNums = arr.filter(isOdd);
+console.log(oddNums); // Outputs [1, 3, 5];
+console.log(arr); // Outputs [1, 2, 3, 4, 5], original array is not affected
+```
+#### reduce method
+- usa 2 parametros, o primeiro sendo a callback function e o segundo (opcional) o valor inicial, e a callback function por sua vez recebe 2 parametros, o primeiro sendo o acumulador que é o valor que vai sendo agregado a cada iteração, e o valor atual.
+- o segundo parametro é opcional, porem, se nao for colocado, por padrao pega o 1 valor do array
+```javascript
+const arr = [1, 2, 3, 4, 5];
+const productOfAllNums = arr.reduce((total, currentItem) => {
+  return total * currentItem;
+}, 1);
+console.log(productOfAllNums); // Outputs 120;
+console.log(arr); // Outputs [1, 2, 3, 4, 5]
+```
