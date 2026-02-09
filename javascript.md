@@ -154,3 +154,58 @@ const productOfAllNums = arr.reduce((total, currentItem) => {
 console.log(productOfAllNums); // Outputs 120;
 console.log(arr); // Outputs [1, 2, 3, 4, 5]
 ```
+## DOM Manipulation
+### query selectors
+- element.querySelector(selector): retorna a referencia ao primeiro 'match' do selector
+- element.querySelectorAll(selectors): returns a “NodeList” containing references to all of the matches of the selectors.
+### element creation
+- document.createElement(tagName, [options]): creates a new element of tag type tagName. [options] in this case means you can add some optional parameters to the function.
+### append elements
+- parentNode.appendChild(childNode) - appends childNode as the last child of parentNode.
+- parentNode.insertBefore(newNode, referenceNode) - inserts newNode into parentNode before referenceNode.
+### remove element
+- parentNode.removeChild(child) - removes child from parentNode on the DOM and returns a reference to child.
+### altering element
+```javascript
+// creates a new div referenced in the variable 'div'
+const div = document.createElement("div");
+```
+```javascript
+// adds the indicated style rule to the element in the div variable
+div.style.color = "blue";
+
+// adds several style rules
+div.style.cssText = "color: blue; background: white;";
+
+// adds several style rules
+div.setAttribute("style", "color: blue; background: white;");
+```
+### edditing element
+```javascript
+// if id exists, update it to 'theDiv', else create an id with value "theDiv"
+div.setAttribute("id", "theDiv");
+
+// returns value of specified attribute, in this case "theDiv"
+div.getAttribute("id");
+
+// removes specified attribute
+div.removeAttribute("id");
+```
+### working with classes
+```javascript
+// adds class "new" to your new div
+div.classList.add("new");
+
+// removes "new" class from div
+div.classList.remove("new");
+
+// if div doesn't have class "active" then add it, or if it does, then remove it
+div.classList.toggle("active");
+```
+### OBS
+- as vezes pode dar erro no js pois ele é carregado antes do html ser carregado, então para evitarmos erros se o script alterar o html, usaremos isso:
+```html
+<head>
+  <script src="js-file.js" defer></script>
+</head>
+```
