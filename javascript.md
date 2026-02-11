@@ -232,4 +232,28 @@ const btn = document.querySelector("#btn");
 btn.addEventListener("click", () => {
     alert("Hello World");
 });
+```
+### parameter e
+```javascript
+btn.addEventListener("click", function (e) {
+    console.log(e);
+});
+```
+- o que acontece nesse trecho é o seguinte: primeiro, a função *function (e)* é uma anonima, e o addEventListener sempre espera como segundo parametro uma funcao, e por padrao o argumento dessa funcao sempre será um objeto do tipo Event, e assim podemos pegar informacoes e adicionar caracteristicas.
+- as informacoes por exemplo pode ser *e.target*
+### colocando listeners para um grupo de nodes
+```html
+<div id="container">
+    <button id="one">Click Me</button>
+    <button id="two">Click Me</button>
+    <button id="three">Click Me</button>
+</div>
+```
+```javascript
+const buttons = document.querySelectorAll("button");
 
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert(button.id);
+    });
+});
