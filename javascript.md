@@ -209,3 +209,27 @@ div.classList.toggle("active");
   <script src="js-file.js" defer></script>
 </head>
 ```
+## Events
+- existem 3 métodos para adicionar eventos no html:
+- diretamente no arquivo html:
+```html
+<button onclick="alert('Hello World')">Click Me</button>
+```
+- podemos colocar no arquivo js com propriedades do tipo on<eventType>, entretanto, um elemento DOM so pode ter um on<eventType> tipo por vez.
+```html
+<button id="btn">Click Me</button>
+```
+```javascript
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("Hello World");
+```
+- o melhor método, é usando event listener:
+```html
+<button id="btn">Click Me Too</button>
+```
+```javascript
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", () => {
+    alert("Hello World");
+});
+
